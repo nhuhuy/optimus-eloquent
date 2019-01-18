@@ -24,8 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "nhuhuy\\OptimusEloquent\\": "packages/nhuhuy/OptimusEloquent/src",
-            "App\\": "app/"
+            "nhuhuy\\OptimusEloquent\\": "src",
         }
     },
     "autoload-dev": {
