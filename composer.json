@@ -6,13 +6,15 @@
         {
             "name": "Nguyen Nhu Huy",
             "email": "huy@ses.vn",
-            "homepage": "ses.vn"
+            "homepage": "http://ses.vn"
         }
     ],
     "homepage": "https://github.com/nhuhuy/optimus-eloquent",
-    "keywords": ["Laravel", "OptimusEloquent"],
+    "keywords": ["Laravel", "Optimus Eloquent"],
     "require": {
-        "illuminate/support": "~5"
+        "illuminate/support": "~5",
+        "graham-campbell/manager": "^4.1",
+        "jenssegers/optimus": "^0.2.3"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
