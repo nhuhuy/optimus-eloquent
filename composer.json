@@ -1,0 +1,44 @@
+{
+    "name": "nhuhuy/optimus-eloquent",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nguyen Nhu Huy",
+            "email": "huy@ses.vn",
+            "homepage": "ses.vn"
+        }
+    ],
+    "homepage": "https://github.com/nhuhuy/optimus-eloquent",
+    "keywords": ["Laravel", "OptimusEloquent"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "nhuhuy\\OptimusEloquent\\": "packages/nhuhuy/OptimusEloquent/src",
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "nhuhuy\\OptimusEloquent\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "nhuhuy\\OptimusEloquent\\OptimusEloquentServiceProvider"
+            ],
+            "aliases": {
+                "OptimusEloquent": "nhuhuy\\OptimusEloquent\\Facades\\OptimusEloquent"
+            }
+        }
+    }
+}
