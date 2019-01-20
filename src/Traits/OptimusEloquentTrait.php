@@ -15,38 +15,6 @@ namespace  nhuhuy\OptimusEloquent\Traits;
 trait OptimusEloquentTrait
 {
     /**
-     * @param $method
-     * @param $parameters
-     * @return mixed
-     */
-    public function __call($method, $parameters)
-    {
-        switch ($method) {
-            case 'find':
-                $parameters[0] = $this->getOptimus()->decode($parameters[0]);
-                break;
-            case 'whereIn':
-                if ($parameters[0] == 'id') {
-                    $parameters[1] = $this->mapToOptimusIds($parameters[1]);
-                }
-                break;
-        }
-        return parent::__call($method, $parameters);
-    }
-
-    /**
-     * @param array $array
-     * @return array
-     */
-    private function mapToOptimusIds(array $array): array
-    {
-        $array = array_map(function ($value) {
-            return $this->getOptimus()->decode($value);
-        }, $array);
-        return $array;
-    }
-
-    /**
      * @param $value
      * @return int
      */
