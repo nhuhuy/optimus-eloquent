@@ -18,7 +18,7 @@ trait OptimusEloquentTrait
      * @param $value
      * @return int
      */
-    public function getIdAttribute($value): int
+    public function getHashIdAttribute($value): int
     {
         return $this->getOptimus()->encode($value);
     }
